@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 feature 'User Registration' do
   scenario 'Successfully' do
     visit root_path
