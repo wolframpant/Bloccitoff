@@ -10,7 +10,6 @@ gem 'figaro', '1.0'
 group :development, :test do
   gem 'rspec-rails', '>= 2.0.1'
   gem 'capybara'
-  gem 'cucumber-rails'
   gem 'database_cleaner'
 end
 
@@ -26,6 +25,7 @@ end
 
 group :test do
   gem 'email_spec'
+  gem 'cucumber-rails', :require => false
 end
 
 gem 'devise'
