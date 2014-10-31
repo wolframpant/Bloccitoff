@@ -12,16 +12,14 @@ feature 'User Registration' do
     fill_in 'Password Confirmation', with: 'helloworld'
     click_button('Sign Up')
     expect(page).to have_content 'A message with a confirmation'
-
-    # open email
-    # click confirmation link in email
-
-    # expect page to have "you are confirmed" text
-
-    # click link "Sign in"
-    # fill in sign in form
-    # click button to sign in
-    # check for "You are signed in " message
-    # Check username is in page
+    open_last_email_for('abc@example.com')
+    click_first_link_in_email(email=current_email)
+    expect(page).to have_content 'Your email address has been successfully confirmed.'
+    click_link('Sign In')
+    fill_in 'Email', with: 'abc@example.com'
+    fill_in 'Password', with: 'helloworld'
+    click_button('Log in') 
+    expect(page).to have_content 'Signed in successfully.' 
+    expect(page).to have_content 'Joe Schmo'
   end
 end 
