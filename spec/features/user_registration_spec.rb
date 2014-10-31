@@ -20,6 +20,6 @@ feature 'User Registration' do
     fill_in 'Password', with: 'helloworld'
     click_button('Log in') 
     expect(page).to have_content 'Signed in successfully.' 
-    expect(page).to have_content 'abc@example.com'
+    expect(page).to have_content 'Joe Schmo'
   end
 end 
