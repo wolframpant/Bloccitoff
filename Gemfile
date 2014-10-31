@@ -5,9 +5,13 @@ gem 'rails', '4.0.9'
 
 gem 'bootstrap-sass', '~>3.2.0'
 
+gem 'figaro', '1.0'
+
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 2.0.1'
   gem 'capybara'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 # Use sqlite3 as the database for Active Record
@@ -18,6 +22,10 @@ end
 
 group :development do
   gem 'sqlite3'
+end
+
+group :test do
+  gem 'email_spec'
 end
 
 gem 'devise'

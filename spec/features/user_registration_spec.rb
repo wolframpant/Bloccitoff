@@ -3,13 +3,15 @@ require 'rails_helper'
 feature 'User Registration' do
   scenario 'Successfully' do
     visit root_path
-    click_link('Sign up')
+    within '.user-info' do
+        click_link('Sign Up')
+    end
     fill_in 'Name', with: 'Joe Schmo'
-    fill_in 'email', with: 'abc@example.com'
+    fill_in 'Email', with: 'abc@example.com'
     fill_in 'Password', with: 'helloworld'
     fill_in 'Password Confirmation', with: 'helloworld'
-    click_button('Save')
-    expect(page).to have_content 'Please check your email inbox for a confirmation email'
+    click_button('Sign Up')
+    expect(page).to have_content 'A message with a confirmation'
 
     # open email
     # click confirmation link in email
