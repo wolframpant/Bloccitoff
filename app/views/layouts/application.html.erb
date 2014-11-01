@@ -11,7 +11,8 @@
   <div class="container">
   <ul class="nav nav-tabs">
     <li><%= link_to "Bloccitoff", root_path %></li>
-    <li><%= link_to "Todos", todos_path %></li>
+    <li><%= link_to "Todos", todos_path %></li> 
+    <li><%= link_to "New Todo", new_todo_path %></li>
     <div class="pull-right user-info">
       <% if current_user %>
         <%= link_to (current_user.name || current_user.email), current_user %>
