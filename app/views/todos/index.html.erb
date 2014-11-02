@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag    "TodoIndex", media: "all", "data-turbolinks-track" => true %>
+
 <h1>Current TODO list</h1>
 
 <% @Todos = current_user.todos %>
@@ -8,15 +10,15 @@
 
 <table>
   <tr>
-    <th>Description</th>
-    <th>Days Old</th>
-    <th>Completed?</th>
+    <th class="description">Description</th>
+    <th class="days_old">Days Old</th>
+    <th class="completed">Completed?</th>
   </tr>
   <% @Todos.each do |t|%>
     <tr>
-      <td><%= t.description %></td>
-      <td><%= Age_of_todo(t) %></td>
-      <td><div><%= form_for [t] do |f| %>
+      <td class="description"><%= t.description %></td>
+      <td class="days_old"><%= Age_of_todo(t) %></td>
+      <td class="completed"><div><%= form_for [t] do |f| %>
             <%= f.check_box :completed, {}, "true" %>
             <%= f.submit 'Save' %>
           <% end %></div></td>

@@ -1,0 +1,24 @@
+@import "bootstrap";
+
+table {
+  width: 80%;
+}
+
+th {
+  height: 20px;
+}
+
+.description {
+  width: 50%;
+  text-align: right;
+}
+
+.days_old {
+  width: 25%;
+  text-align: center;
+}
+
+.completed {
+  width: 25%;
+  text-align: center;
+}
