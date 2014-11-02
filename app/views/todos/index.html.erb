@@ -17,7 +17,7 @@
       <td><%= t.description %></td>
       <td><%= Age_of_todo(t) %></td>
       <td><div><%= form_for [t] do |f| %>
-            <%= f.check_box "completed", {}, "true", "checked: if t.completed then true" %>
+            <%= f.check_box :completed, {}, "true" %>
             <%= f.submit 'Save' %>
           <% end %></div></td>
     </tr>

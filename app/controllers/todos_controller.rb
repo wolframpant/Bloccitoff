@@ -13,8 +13,6 @@ class TodosController < ApplicationController
       redirect_to :back
       flash[:notice] = "Please try again."
     end
-
-    
   end
 
   def new
