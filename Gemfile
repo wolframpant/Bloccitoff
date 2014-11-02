@@ -7,10 +7,13 @@ gem 'bootstrap-sass', '~>3.2.0'
 
 gem 'figaro', '1.0'
 
+gem 'faker'
+
 group :development, :test do
   gem 'rspec-rails', '>= 2.0.1'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Use sqlite3 as the database for Active Record

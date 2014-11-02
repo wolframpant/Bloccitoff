@@ -1,6 +1,6 @@
 Blocitoff::Application.routes.draw do
   devise_for :users
-  resources :todos, only: [:new, :create, :show, :index]
+  resources :todos, only: [:new, :create, :show, :index, :update]
   resources :users, only: [:new, :create, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,6 +11,8 @@ Blocitoff::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'welcome/index' => 'welcome#index'
+
+  patch '/todos/:id' => 'todos#id'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

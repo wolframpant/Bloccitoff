@@ -1,1 +1,27 @@
 <h1>Current TODO list</h1>
+
+<% @Todos = current_user.todos %>
+<% def Age_of_todo(t) %>
+   <%= (((t.created_at + 7.days) - Time.now)/(60*60*24)).round %>
+<% end %>
+
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Days Old</th>
+    <th>Completed?</th>
+  </tr>
+  <% @Todos.each do |t|%>
+    <tr>
+      <td><%= t.description %></td>
+      <td><%= Age_of_todo(t) %></td>
+      <td><%= form_for [t] do |f| %>
+            <%= f.check_box(:completed, {}, "true", "false") %>
+            <%= f.submit 'Save' %>
+          <% end %></td>
+    </tr>
+  <% end %>
+</table>
+
+
