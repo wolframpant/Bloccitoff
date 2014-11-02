@@ -1,5 +1,6 @@
 class TodosController < ApplicationController
-  
+  respond_to :html, :js
+
   def index
   end
 
@@ -7,7 +8,13 @@ class TodosController < ApplicationController
     @todo = Todo.find params[:id]
     if @todo.save 
       redirect_to :back
+      flash[:notice] = "Success!"
+    else
+      redirect_to :back
+      flash[:notice] = "Please try again."
     end
+
+    
   end
 
   def new

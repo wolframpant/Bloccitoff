@@ -16,10 +16,10 @@
     <tr>
       <td><%= t.description %></td>
       <td><%= Age_of_todo(t) %></td>
-      <td><%= form_for [t] do |f| %>
-            <%= f.check_box(:completed, {}, "true", "false") %>
+      <td><div><%= form_for [t] do |f| %>
+            <%= f.check_box "completed", {}, "true", "checked: if t.completed then true" %>
             <%= f.submit 'Save' %>
-          <% end %></td>
+          <% end %></div></td>
     </tr>
   <% end %>
 </table>
