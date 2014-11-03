@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :todo do
     description "Fake description"
-    completed "false"
+    completed false
     user "Ellen Wolfson"
   end
 end
