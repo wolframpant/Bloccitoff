@@ -6,7 +6,7 @@ class TodosController < ApplicationController
 
   def update
     @todo = Todo.find params[:id]
-    if @todo.save 
+    if @todo.update todo_params 
       redirect_to :back
       flash[:notice] = "Success!"
     else
