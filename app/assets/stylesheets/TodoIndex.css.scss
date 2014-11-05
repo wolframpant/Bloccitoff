@@ -5,6 +5,11 @@ table {
 
 tr {
   height: 40px;
+  color: #107D37;
+}
+
+h1 {
+  color: #27024A;
 }
 
 th {
@@ -18,6 +23,7 @@ th {
 .description {
   width: 50%;
   text-align: left;
+  padding: 0 0 0 15px;
 }
 
 .days_old {
@@ -29,3 +35,4 @@ th {
   width: 25%;
   text-align: center;
 }
+
