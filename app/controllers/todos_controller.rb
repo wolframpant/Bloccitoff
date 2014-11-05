@@ -4,6 +4,17 @@ class TodosController < ApplicationController
   def index
   end
 
+  def destroy
+    @todo = Todo.find params[:id]
+    if @todo.destroy 
+      redirect_to todos_path
+      flash[:notice] = "Your completed Todo has been deleted."
+    else
+      redirect to :back
+      flash[:notice] = "There was an error completing your Todo. Please try again."
+    end
+  end
+
   def update
     @todo = Todo.find params[:id]
     if @todo.update todo_params 
@@ -37,7 +48,7 @@ class TodosController < ApplicationController
   private
 
   def todo_params
-    params.require(:todo).permit(:description, :completed)
+    params.require(:todo).permit(:description)
   end
 
 end

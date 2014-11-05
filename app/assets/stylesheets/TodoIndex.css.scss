@@ -1,13 +1,18 @@
 
 table {
   width: 80%;
-  background-color: red;
+}
+
+tr {
+  height: 40px;
 }
 
 th {
   height: 50px;
   text-size: extra-large;
   text-decoration: bold;
+  background-color: #27024A;
+  color: white;
 }
 
 .description {

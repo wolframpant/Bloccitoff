@@ -9,6 +9,8 @@ gem 'figaro', '1.0'
 
 gem 'faker'
 
+gem 'whenever', '~> 0.9.4'
+
 group :development, :test do
   gem 'rspec-rails', '>= 2.0.1'
   gem 'capybara'
