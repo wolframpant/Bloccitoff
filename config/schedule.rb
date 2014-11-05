@@ -20,9 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 
 every 1.day, :at +> '12:30 am' do
-  rake delete_items
+  rake delete_todos
 end
 
-task delete_items: :environment do
-  Item.where("created_at <=?", Time.now - 7.days).destroy_all
-end
+

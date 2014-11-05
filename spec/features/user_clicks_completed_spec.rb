@@ -1,15 +1,13 @@
 require 'rails_helper'
+include Warden::Test::Helpers
+Warden.test_mode!
 
 feature 'user clicks completed' do
   scenario "Successfully" do
-     user = create(:user, email: "abc@example.com")
-     create(:todo, user: user)
+    user = create(:user, email: "abc@example.com")
+    create(:todo, user: user)
     
-    visit new_user_session_path
-    fill_in 'Email', with: 'abc@example.com'
-    fill_in 'Password', with: 'helloworld'
-    click_button('Log in') 
-    expect(page).to have_content 'Signed in successfully.' 
+    login_as(user, :scope => :user)
 
     visit todos_path
     expect(page).to have_content('Fake description')

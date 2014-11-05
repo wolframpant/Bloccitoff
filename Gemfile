@@ -30,7 +30,6 @@ end
 
 group :test do
   gem 'email_spec'
-  gem 'cucumber-rails', :require => false
 end
 
 gem 'devise'

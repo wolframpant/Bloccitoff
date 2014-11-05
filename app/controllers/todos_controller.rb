@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
-  respond_to :html, :js
-
+  
   def index
+    @todos = current_user.todos
   end
 
   def destroy
@@ -45,6 +45,7 @@ class TodosController < ApplicationController
     @todo = Todo.find params[:id]
   end
 
+  
   private
 
   def todo_params
