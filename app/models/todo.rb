@@ -8,4 +8,6 @@ class Todo < ActiveRecord::Base
     (((created_at + 7.days) - Time.now)/(60*60*24)).round
   end
 
+  validates :description, presence: true
+
 end

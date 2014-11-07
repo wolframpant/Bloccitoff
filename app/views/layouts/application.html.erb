@@ -12,10 +12,10 @@
   <ul class="nav nav-tabs">
     <li><%= link_to "Bloccitoff", root_path %></li>
     <li><%= link_to "Todos", todos_path %></li> 
-    <li><%= link_to "New Todo", new_todo_path %></li>
+    <li><%= link_to "Create Todo", new_todo_path %></li>
     <div class="pull-right user-info">
       <% if current_user %>
-        <%= link_to (current_user.name || current_user.email), current_user %>
+        <%= link_to (current_user.name || current_user.email), todos_path %>
         <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
         <span class="glyphicon glyphicon-user"></span>
       <% end %>
@@ -28,6 +28,7 @@
       <%= link_to "Sign Up", new_user_registration_path %>
       <% end %>
     </div>
+  </div>
   </ul>
 
   <p><%= flash[:notice] if flash[:notice] %></p>

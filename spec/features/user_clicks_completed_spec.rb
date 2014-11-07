@@ -4,7 +4,7 @@ Warden.test_mode!
 
 feature 'user clicks completed' do
   scenario "Successfully" do
-    user = create(:user, email: "abc@example.com")
+    user = create(:user)
     create(:todo, user: user)
     
     login_as(user, :scope => :user)

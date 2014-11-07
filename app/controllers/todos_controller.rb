@@ -34,9 +34,9 @@ class TodosController < ApplicationController
     @todo = current_user.todos.build(todo_params)
     if @todo.description?
       @todo.save
-      redirect_to @todo, notice: 'Your new TODO was saved'
+      redirect_to @todo, notice: 'Your new TODO was saved!'
     else
-      flash[:notice] = 'You forgot to enter a description'
+      flash[:notice] = 'You forgot to enter a description. Please try again.'
       render :new
     end
   end

@@ -1,7 +1,9 @@
 require 'rails_helper'
+require 'spec_helper'
 
 feature 'User Registration' do
   scenario 'Successfully' do
+    DatabaseCleaner.clean
     visit root_path
     within '.user-info' do
         click_link('Sign Up')
