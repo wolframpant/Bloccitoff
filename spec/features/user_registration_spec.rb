@@ -5,7 +5,7 @@ feature 'User Registration' do
   scenario 'Successfully' do
     visit root_path
     within '.user-info' do
-        click_link('Sign Up')
+      click_link('Sign Up')
     end
     fill_in 'Name', with: 'Joe Schmo'
     fill_in 'Email', with: 'abc@example.com'

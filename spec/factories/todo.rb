@@ -4,6 +4,6 @@ FactoryGirl.define do
       "Fake description #{n}"
     end
     completed false
-    user_id 1
+    user
   end
 end

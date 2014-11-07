@@ -5,7 +5,7 @@ class TodosController < ApplicationController
   end
 
   def destroy
-    @todo = Todo.find params[:id]
+    @todo = current_user.todos.find(params[:id])
     if @todo.destroy 
       redirect_to todos_path
       flash[:notice] = "Your completed Todo has been deleted."
@@ -32,7 +32,7 @@ class TodosController < ApplicationController
 
   def create
     @todo = current_user.todos.build(todo_params)
-    if @todo.description?
+    if @todo.valid?
       @todo.save
       redirect_to @todo, notice: 'Your new TODO was saved!'
     else
@@ -42,7 +42,7 @@ class TodosController < ApplicationController
   end
 
   def show
-    @todo = Todo.find params[:id]
+    @todo = current_user.todos.find(params[:id])
   end
 
   
