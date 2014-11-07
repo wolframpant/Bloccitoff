@@ -1,7 +1,6 @@
 require 'database_cleaner'
 
-
-RSpec.confifure do |config|
+RSpec.configure do |config|
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
