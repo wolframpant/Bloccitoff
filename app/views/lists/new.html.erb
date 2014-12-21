@@ -1,17 +1,22 @@
 <div class="container">
   <div class="centerlist">
     <div class="checkmark">
-      <h1> Create a new Todo List</h1>
+      <div class="text">
+        <div class="primary-content">
+          <h1> Create a new Todo List</h1>
 
-      <%= form_for @list do |f| %>
-        <%= f.label :title %>
-        <%= f.text_field :title, placeholder: 'Name your list', size: 60 %>
-        <%= f.submit 'Save' %>
-      <% end %>
+          <%= form_for @list do |f| %>
+            <%= f.label :title %>
+            <%= f.text_field :title, placeholder: 'Name your list', size: 60 %>
+            <%= f.submit 'Save' %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 
 </div>
-  
+
+<%= javascript_include_tag "turbolinks_transitions" %>  
     
 

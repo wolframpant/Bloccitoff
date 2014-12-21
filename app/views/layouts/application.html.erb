@@ -3,11 +3,13 @@
 <head>
   <title>Blocitoff</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "animate", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "turbolinks_transitions", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body data-no-turbolink = "true">
-
+<body>
+  
   <div class="container">
     <ul class="nav nav-tabs">
       <li><%= link_to "BLOCCITOFF", root_path %></li>
@@ -40,6 +42,8 @@
     <% end %>
 
     <%= yield %>
- 
+
+  <%= javascript_include_tag "turbolinks_transitions" %>
 </body>
 </html>
+

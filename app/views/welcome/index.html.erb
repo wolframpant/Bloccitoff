@@ -1,16 +1,20 @@
 <div class="container">
   <div class="welcome_index">
     <div class="checkmark">
-    <h1> Bloccitoff</h1>
-    <% if current_user %>
-      <h3> Welcome to Blocitoff, where you can maintain useful, non-overwhelming to-do lists. Create as many different lists as are helpful to you, and list "todos" on those lists. </h3>
-      <h3>Every item on any of your lists that is more than 7 days old will be automatically deleted, on the theory that if it has remained undone for a week, it probably was never all that important anyway.</h3>
-      <h3> Click on <span class= 'huge'><%= link_to 'Create List', new_list_path %></span> to get started.</h3>
-    <% else %>  
-      <h3> Blocitoff is a resource for maintaining a useful, non-overwhelming to-do list!</h3>
-      <br />
-      <h3> <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary" %> or <%= link_to "Sign In", new_user_session_path, class:"btn btn-primary" %> today!</h3>
-    <% end %>
+      <div class="primary-content">
+        <h1> Bloccitoff</h1>
+        <% if current_user %>
+          <h3> Welcome to Blocitoff, where you can maintain useful, non-overwhelming to-do lists. Create as many different lists as are helpful to you, and list "todos" on those lists. </h3>
+          <h3>Every item on any of your lists that is more than 7 days old will be automatically deleted, on the theory that if it has remained undone for a week, it probably was never all that important anyway.</h3>
+          <h3> Click on <span class= 'huge'><%= link_to 'Create List', new_list_path %></span> to get started.</h3>
+        <% else %>  
+          <h3> Blocitoff is a resource for maintaining a useful, non-overwhelming to-do list!</h3>
+          <br />
+          <h3> <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-primary" %> or <%= link_to "Sign In", new_user_session_path, class:"btn btn-primary" %> today!</h3>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag "turbolinks_transitions" %>

@@ -2,13 +2,20 @@
   <div class="centerlist">
     <div class="checkmark">
       <div class="todolist">
-      <h1>Your Todo Lists</h1>
-
-      <% @lists.each do |l| %>
-      <h3><%= link_to l.title, l %></h3>
-        <br />
-      <% end %>
+        <div class="text">
+          <div class="primary-content">
+            <h1>Your Todo Lists</h1>
+            <ul>
+              <% @lists.each do |l| %>
+                <li><h3><%= link_to l.title, l %></h3></li
+                <br />
+              <% end %>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>    
 </div>
+
+<%= javascript_include_tag "turbolinks_transitions" %>
