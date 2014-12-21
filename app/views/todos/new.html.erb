@@ -1,8 +1,30 @@
-<h1>Please enter a description for your new TODO</h1>
-<br />
-<%= form_for @todo do |form| %>
-  <%= form.text_field :description, placeholder: 'Description' %>
-  <%= form.submit 'Save' %> 
-  <% end %>
-
+<div class="container">
+  <div class="centerlist">
+    <div class="checkmark"> 
+      <div class='new_todo'>
+        <h1>Please enter a description for your new TODO</h1>
+        <br />
+        <div class="new_todo_form">
+          <%= form_for @todo do |form| %>
+            <%= form.label 'Choose a list' %>
+            <br />
+            <%= form.collection_select :list_id, @lists, :id, :title, size: 50 %>
+            <br />
+            <br />
+            <%= form.label :description %>
+            <br />
+            <div class="description_field">
+              <%= form.text_field :description, placeholder: 'Description', size: 60 %>
+            </div>
+            <br />
+            <br />
+            <div class="form_submit">
+              <%= form.submit 'Save' %> 
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 

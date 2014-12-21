@@ -6,34 +6,40 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-no-turbolink = "true">
 
   <div class="container">
-  <ul class="nav nav-tabs">
-    <li><%= link_to "Bloccitoff", root_path %></li>
-    <li><%= link_to "Todos", todos_path %></li> 
-    <li><%= link_to "Create Todo", new_todo_path %></li>
-    <div class="pull-right user-info">
+    <ul class="nav nav-tabs">
+      <li><%= link_to "BLOCCITOFF", root_path %></li>
       <% if current_user %>
-        <%= link_to (current_user.name || current_user.email), todos_path %>
-        <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
-        <span class="glyphicon glyphicon-user"></span>
+        <li><%= link_to "CREATE LIST", new_list_path %></li>
+        <li><%= link_to "VIEW LISTS", lists_path %></li>
+        <li><%= link_to "CREATE TODO", new_todo_path %></li>
       <% end %>
 
-      <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-sm' do %>
-          <span class="glyphicon glyphicon-log-out"></span>
+      <div class="pull-right user-info">
+        <% if current_user %>
+          <%= link_to (current_user.name.upcase || current_user.email.upcase), todos_path %>
+          <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
+          <span class="glyphicon glyphicon-user"></span>
         <% end %>
-      <% else %>
-      <%= link_to "Sign In", new_user_session_path %> or
-      <%= link_to "Sign Up", new_user_registration_path %>
-      <% end %>
+
+        <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-sm' do %>
+            <span class="glyphicon glyphicon-log-out"></span>
+          <% end %>
+        <% else %>
+          <%= link_to "SIGN IN", new_user_session_path %> or
+          <%= link_to "SIGN UP", new_user_registration_path %>
+        <% end %>
     </div>
   </div>
   </ul>
+  
+    <% if flash[:notice] %>
+      <p class="notices"><%= flash[:notice]%></p>
+    <% end %>
 
-  <p><%= flash[:notice] if flash[:notice] %></p>
-
-<%= yield %>
-
+    <%= yield %>
+ 
 </body>
 </html>

@@ -2,16 +2,17 @@ class TodosController < ApplicationController
   
   def index
     @todos = current_user.todos
+    @todo = Todo.new
   end
 
   def destroy
     @todo = current_user.todos.find(params[:id])
     if @todo.destroy 
       redirect_to todos_path
-      flash[:notice] = "Your completed Todo has been deleted."
+      flash[:notice] = "Your completed Todo has been deleted from your list."
     else
       redirect to :back
-      flash[:notice] = "There was an error completing your Todo. Please try again."
+      flash[:notice] = "There was an error completing your Todo. Please try again." 
     end
   end
 
@@ -28,16 +29,17 @@ class TodosController < ApplicationController
 
   def new
     @todo = Todo.new
+    @lists = current_user.lists
   end
 
   def create
-    @todo = current_user.todos.build(todo_params)
+    @todo = Todo.new(todo_params)
     if @todo.valid?
       @todo.save
-      redirect_to @todo, notice: 'Your new TODO was saved!'
+      redirect_to :back, notice: 'Your new TODO was saved!'
     else
       flash[:notice] = 'You forgot to enter a description. Please try again.'
-      render :new
+      redirect_to :back
     end
   end
 
@@ -49,7 +51,7 @@ class TodosController < ApplicationController
   private
 
   def todo_params
-    params.require(:todo).permit(:description)
+    params.require(:todo).permit(:description, :list_id)
   end
 
 end

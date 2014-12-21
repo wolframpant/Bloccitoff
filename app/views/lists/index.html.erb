@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="centerlist">
+    <div class="checkmark">
+      <div class="todolist">
+      <h1>Your Todo Lists</h1>
+
+      <% @lists.each do |l| %>
+      <h3><%= link_to l.title, l %></h3>
+        <br />
+      <% end %>
+      </div>
+    </div>
+  </div>    
+</div>

@@ -14,3 +14,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  background-color: #DCE0E2;
+}
+
+.notices {
+  padding: 10px;
+  margin-left: 20px;
+  font-size: 200%;
+  background-color: #7D9A64;
+  color: white;
+}
+
+.nav a {
+  color: #404449;
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.btn {
+  background-color: #7D9A64;
+}
+

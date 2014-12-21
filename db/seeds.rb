@@ -12,23 +12,33 @@ require 'faker'
 end
 users=User.all
 
-50.times do
-  Todo.create!(
+15.times do
+  List.create!(
     user: users.sample,
+    title: Faker::Lorem.sentence
+  )
+end
+lists=List.all
+
+100.times do
+  Todo.create!(
+    list: lists.sample,
     description: Faker::Lorem.sentence
-)
+  )
 end
 todos = Todo.all
 
-User.first.update_attributes!(
+User.create!(
   name: 'Ellen Wolfson',
   email: 'llnwlfsn@gmail.com',
+  confirmed_at: Time.now,
   password: 'helloworld'
 )
 
 
 puts "Seed finished"
 puts "#{User.count} users created"
+puts "#{List.count} lists created"
 puts "#{Todo.count} todos created"
 
 
