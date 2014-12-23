@@ -33,7 +33,6 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @todos = Todo.where(list_id: @list.id)
-    @todosfresh = @todos.where(:age_of_todo <= 7)
     @todo = Todo.new
   end
   
