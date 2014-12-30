@@ -16,17 +16,6 @@ class TodosController < ApplicationController
     end
   end
 
-  def update
-    @todo = Todo.find params[:id]
-    if @todo.update todo_params 
-      redirect_to :back
-      flash[:notice] = "Success!"
-    else
-      redirect_to :back
-      flash[:notice] = "Please try again."
-    end
-  end
-
   def new
     @todo = Todo.new
     @lists = current_user.lists

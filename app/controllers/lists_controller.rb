@@ -32,7 +32,12 @@ class ListsController < ApplicationController
   
   def show
     @list = List.find(params[:id])
-    @todos = Todo.where(list_id: @list.id)
+    @list.todos.each do |t|
+      if t.age_of_todo > 7 
+        t.delete
+      end
+    end
+    @todos = @list.todos
     @todo = Todo.new
   end
   
