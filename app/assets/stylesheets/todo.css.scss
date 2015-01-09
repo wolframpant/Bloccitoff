@@ -5,6 +5,36 @@
   text-align: left;
 }
 
+.bigdescription {
+  width: 35%;
+  font-size: 125%;
+  font-family: Forte, sans-serif;
+  padding-left: 10px;
+}
+
+.biglistname {
+  width: 35%;
+  font-family: Forte, sans-serif;
+}
+
+.listname {
+  font-family: Forte, sans-serif;
+  text-align: left;
+  font-size: 150%;
+}
+
+.big_days_old {
+  width: 15%;
+  font-size: 125%;
+  font-family: Forte, sans-serif;
+  text-align: center;
+}
+
+.bigcompleted {
+  width: 15%;
+  font-size: 125%;
+}
+
 .new_todo_form {
   width: 60%;
   margin-right: auto;
@@ -17,7 +47,7 @@
 }
 
 .form_submit {
-  color: #ff3f00;
+  color: #393939;
   font-size: 125%;
 }
 

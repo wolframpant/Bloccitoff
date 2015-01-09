@@ -15,24 +15,28 @@
 @import "bootstrap";
 
 body {
-  background-color: #ffffcc;
+  background-color: #393939;
+  color: #6e6e6e;
 }
 
 .notices {
   padding: 10px;
   margin-left: 20px;
   font-size: 150%;
-  background-color: #ffcc99;
-  color: #34425c;
+  background-color: #f3843e;
+  color: white;
 }
 
 .nav a {
-  color: #FF1975;
+  color: #ff5a09;
   font-weight: bold;
   font-size: 125%;
 }
 
-.btn {
-  background-color: #FFcc99;
+.nav a:hover {
+  color: #6e6e6e;
 }
 
+.btn {
+  background-color: #f3843e;
+}

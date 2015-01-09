@@ -1,17 +1,14 @@
 .checkmark {
-  width: 100%;
+  width: 80%;
   height: 600px;
   margin-right: auto;
   margin-left: auto;
-  background: url(' <%= asset_path("1358288797_AEG_red-tick.png") %> ');
+  margin-top: 70px;
+  background: url(' <%= asset_path("check-mark-10-xxl.png") %> ');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #ffffcc;
-}
-
-.opaque {
-  opacity: 1;
+  background-color: #393939;
 }
 
 .todolist {
@@ -21,70 +18,57 @@
 
 table {
   width: 100%;
-  opacity: 1;
 }
 
-.newtodoline {
-  width: 100%;
-  padding: 0;
-  margin-left: 0;
-  opacity: 1;
-}
-
-tr {
-  height: 40px;
-  color: #34425c;
-  opacity: 1;
+.tablerows {
+  height: 20px;
+  color: #ff5a09;
 }
 
 h1 {
   text-align: left;
-  opacity: 1;
 }
 
-th {
-  height: 50px;
-  text-size: extra-large;
-  font_weight: bold;
-  background-color: #FFC8A3;
-  color: white;
-  font-family: Century Gothic, serif;
+.tableheadings {
+  height: 30px;
+  background-color: #ff9900;
+  color: #ff5a09;
   padding: 10px;
-  opacity: 1;
 }
 
 .description {
   width: 50%;
   text-align: left;
   padding: 0 0 0 15px;
+  margin: 0 0 0 0;
   font-family: Forte, sans-serif;
-  font-size: 200%;
+  font-size: 150%;
 }
 
 .text_field {
   font-family: Forte, sans-serif;
-  font-size: 200%;
-  margin-left: -85px;
+  font-size: 150%;
+  margin-left: - 50px;
 }
 
 .days_old {
   width: 25%;
+  font-family: Forte, sans-serif;
   text-align: center;
+  font-size: 150%;
 }
 
 .completed {
   width: 25%;
   text-align: center;
-  color: #ff3f00;
-  font-size: 150%;
+  color: #393939;
 }
 
 .completed a {
-  color: #ff3f00;
+  color: #393939;
 }
 
 .centerlist {
-  margin-top: 70px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -95,11 +79,28 @@ th {
 }
 
 .centerlist a {
-  color: #34425c;
+  color: #ff5a09;
+}
+
+.cutoff {
+  padding: 10px;
+  color: #ff5a09;
+}
+
+.centerlist a:hover {
+  color: #f3843e;
+}
+
+.listdel {
+  padding: 0 0 0 15px;
+}
+
+.listlist{
+  font-size: 125%;
 }
 
 .todolist {
-  width: 40%;
+  width: 60%;
   margin-right: auto;
   margin-left: auto;
 }

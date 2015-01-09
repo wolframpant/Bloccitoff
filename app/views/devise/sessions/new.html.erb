@@ -1,6 +1,8 @@
 <div class="container">
-  <div id = 'primary-content'
-    <h2>Log in</h2>
+  <div class="centerlist">
+  <div class="checkmark">
+  <div id = 'primary-content'>
+    <h1>Log in</h1>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div><%= f.label :email %><br />
@@ -18,4 +20,6 @@
 
     <%= render "devise/shared/links" %>
   </div>
+</div>
+</div>
 </div>

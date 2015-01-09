@@ -1,7 +1,7 @@
 Blocitoff::Application.routes.draw do
   devise_for :users
   resources :users, only: [:new, :create, :show]
-  resources :lists, only: [:new, :create, :index, :show]
+  resources :lists, only: [:new, :create, :index, :show, :destroy]
   resources :todos, only: [:new, :create, :show, :index, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.

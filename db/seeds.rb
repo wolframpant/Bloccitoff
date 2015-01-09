@@ -15,7 +15,8 @@ users=User.all
 15.times do
   List.create!(
     user: users.sample,
-    title: Faker::Lorem.sentence
+    title: Faker::Lorem.sentence,
+    cutoff: 7
   )
 end
 lists=List.all

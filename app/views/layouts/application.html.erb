@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>Blocitoff</title>
+  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag    "animate", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "turbolinks_transitions", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
   
@@ -21,7 +23,7 @@
 
       <div class="pull-right user-info">
         <% if current_user %>
-          <%= link_to (current_user.name.upcase || current_user.email.upcase), todos_path %>
+        <%= link_to (current_user.name.upcase || current_user.email.upcase), todos_path(user_id: current_user.id) %>
           <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
           <span class="glyphicon glyphicon-user"></span>
         <% end %>

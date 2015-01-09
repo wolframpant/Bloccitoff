@@ -1,12 +1,17 @@
 class TodosController < ApplicationController
   
   def index
+    current_user.todos.each do |t|
+      if t.age_of_todo > t.list.cutoff then
+        t.delete
+      end
+    end
     @todos = current_user.todos
     @todo = Todo.new
   end
 
   def destroy
-    @todo = current_user.todos.find(params[:id])
+    @todo = Todo.find(params[:id])
     if @todo.destroy 
       redirect_to :back
       flash[:notice] = "Your completed Todo has been deleted from your list."

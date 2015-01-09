@@ -5,6 +5,8 @@ class List < ActiveRecord::Base
   has_many :todos, dependent: :destroy
 
   validates :title, presence: true
+  
+  validates :cutoff, presence: true
 
   default_scope { order('created_at DESC') }
  

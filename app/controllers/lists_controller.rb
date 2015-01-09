@@ -32,9 +32,12 @@ class ListsController < ApplicationController
   
   def show
     @list = List.find(params[:id])
-    @list.todos.each do |t|
-      if t.age_of_todo > 7 
-        t.delete
+    @cutoff = @list.cutoff
+    if @list.todos.exists? then  
+      @list.todos.each do |t|
+        if t.age_of_todo > @cutoff then
+          t.delete
+        end
       end
     end
     @todos = @list.todos
@@ -44,7 +47,7 @@ class ListsController < ApplicationController
   private
   
   def list_params
-    params.require(:list).permit(:title)
+    params.require(:list).permit(:title, :cutoff)
   end
-  
+      
 end
