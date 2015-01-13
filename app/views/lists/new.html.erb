@@ -7,16 +7,18 @@
             <h1> Create a new Todo List</h1>
 
             <%= form_for @list do |f| %>
-              <%= f.label :title %>
-              <%= f.text_field :title, placeholder: 'Name your list', size: 60 %>
-              <br />
-              <br />
-              <%= f.label 'How many days do you want to keep your todos? (we suggest 7)' %>
-              <br />
-              <%= f.number_field :cutoff %>
-              <br />
+              <div class="text_field">
+                <%= f.label :title %>
+                <%= f.text_field :title, placeholder: 'Name your list', size: 60 %>
+                <br />
+                <br />
+                <%= f.label 'How many days do you want to keep your todos? (we suggest 7)' %>
+                <br />
+                <%= f.number_field :cutoff %>
+                <br />
               <%= f.submit 'Save' %>
             <% end %>
+            </div>
           </div>
         </div>
       </div>

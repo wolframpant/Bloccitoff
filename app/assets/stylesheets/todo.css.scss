@@ -1,8 +1,13 @@
 .new_todo {
   width: 60%;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 0px;
   text-align: left;
+  color: black;
+}
+
+.new_todo h1 {
+  color: white;
 }
 
 .bigdescription {
@@ -33,12 +38,7 @@
 .bigcompleted {
   width: 15%;
   font-size: 125%;
-}
-
-.new_todo_form {
-  width: 60%;
-  margin-right: auto;
-  margin-left: auto;
+  color: black;
 }
 
 .description_field {

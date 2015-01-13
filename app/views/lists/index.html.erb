@@ -7,7 +7,7 @@
             <h1>Your Todo Lists</h1>
             <ul>
               <% @lists.each do |l| %>
-              <li><span class="listlist"><%= link_to l.title, l %></span><small class="cutoff">Cutoff: <%= l.cutoff %> days</small><br /><small class="listdel"><%= link_to 'Delete', l, method: :delete %></small></li>
+              <li><span class="listlist"><%= link_to l.title, l, method: :GET %></span><small class="cutoff">Cutoff: <%= l.cutoff %> days</small><br /><small class="listdel"><%= link_to 'Delete', l, method: :delete %></small></li>
                 <br />
               <% end %>
             </ul>

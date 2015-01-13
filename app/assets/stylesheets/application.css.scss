@@ -16,7 +16,11 @@
 
 body {
   background-color: #393939;
-  color: #6e6e6e;
+  color: white;
+}
+
+form {
+  color: black;
 }
 
 .notices {
@@ -27,16 +31,20 @@ body {
   color: white;
 }
 
-.nav a {
+a {
   color: #ff5a09;
   font-weight: bold;
   font-size: 125%;
 }
 
-.nav a:hover {
+a:hover {
   color: #f3843e;
 }
 
 .btn {
   background-color: #f3843e;
+}
+
+.btn:hover {
+  background-color: #6e6e6e;
 }

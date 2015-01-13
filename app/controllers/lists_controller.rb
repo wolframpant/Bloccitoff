@@ -10,7 +10,7 @@ class ListsController < ApplicationController
       @list.save
       redirect_to lists_path, notice: 'Your new list was saved'
     else
-      flash[:notice] = 'You forgot to enter a title. Please try again.'
+      flash[:notice] = 'Please try again.'
       redirect_to :back
     end
   end
