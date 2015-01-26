@@ -19,6 +19,7 @@
                  </tr>
               <% end %>
             </table>
+              <%# I had some trouble getting this input field even remotely aligned with the table %>
               <div class="description text_field non_aligned">
                 <%= form_for @todo do |form| %>
                   <%= form.text_field :description, placeholder: 'Add new todo', size: 25 %></div>

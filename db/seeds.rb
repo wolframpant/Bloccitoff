@@ -12,6 +12,7 @@ require 'faker'
 end
 users=User.all
 
+# Create lists
 15.times do
   List.create!(
     user: users.sample,
@@ -21,6 +22,7 @@ users=User.all
 end
 lists=List.all
 
+#Create todos
 100.times do
   Todo.create!(
     list: lists.sample,
@@ -29,6 +31,7 @@ lists=List.all
 end
 todos = Todo.all
 
+#Create admin
 User.create!(
   name: 'Ellen Wolfson',
   email: 'llnwlfsn@gmail.com',
@@ -48,10 +51,3 @@ puts "#{Todo.count} todos created"
 
 
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)

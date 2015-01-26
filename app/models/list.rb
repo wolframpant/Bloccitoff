@@ -1,3 +1,5 @@
+# each user has multiple lists; each list has multiple "todos""
+
 class List < ActiveRecord::Base
 
   belongs_to :user

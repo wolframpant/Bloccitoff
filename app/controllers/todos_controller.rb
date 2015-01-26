@@ -1,6 +1,7 @@
 class TodosController < ApplicationController
   
   def index
+    # delete todos that are older than a list's cutoff
     current_user.todos.each do |t|
       if t.age_of_todo > t.list.cutoff then
         t.delete
@@ -35,10 +36,6 @@ class TodosController < ApplicationController
       flash[:notice] = 'You forgot to enter a description. Please try again.'
       redirect_to :back
     end
-  end
-
-  def show
-    @todo = current_user.todos.find(params[:id])
   end
 
   

@@ -12,10 +12,10 @@
 </head>
 <body>
   <br />
-  <div class="container">
-    <ul class="nav nav-tabs">
+  <div class="container"><%# container is a bootstrap class. I use it on all views, to keep margins, etc. consistent. %>
+    <ul class="nav nav-tabs"><%# also bootstrap classes. %>
       <li><%= link_to "BLOCCITOFF", root_path %></li>
-      <% if current_user %>
+      <% if current_user %> <%# if you're not signed in/registered, you can't do any of these tasks %>
         <li><%= link_to "CREATE LIST", new_list_path %></li>
         <li><%= link_to "VIEW LISTS", lists_path %></li>
         <li><%= link_to "CREATE TODO", new_todo_path %></li>
@@ -25,12 +25,11 @@
         <% if current_user %>
           <li><%= link_to (current_user.name.upcase || current_user.email.upcase), todos_path(user_id: current_user.id) %>
           <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
-            <span class="glyphicon glyphicon-user"></span>
-        <% end %>
-
+            <span class="glyphicon glyphicon-user"></span><%# bootstrap %>
+          <% end %>
           <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary btn-sm' do %>
             <span class="glyphicon glyphicon-log-out"></span>
-          <% end %>
+            <% end %></li>
         <% else %>
           <%= link_to "SIGN IN", new_user_session_path %> or
           <%= link_to "SIGN UP", new_user_registration_path %>

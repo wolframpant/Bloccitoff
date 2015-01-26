@@ -19,10 +19,11 @@ body {
   color: white;
 }
 
-form {
+input, text_area {
   color: black;
 }
 
+/* for flash notices */
 .notices {
   padding: 10px;
   margin-left: 20px;
@@ -32,17 +33,19 @@ form {
 }
 
 a {
-  color: #ff5a09;
+  /* color: #ff5a09; */
+  color: #ff282d;
   font-weight: bold;
   font-size: 125%;
 }
 
 a:hover {
-  color: #f3843e;
+  /* color: #f3843e; */
+  color: #ff5a09;
 }
 
 .btn {
-  background-color: #f3843e;
+  background-color: #ff5a09;
 }
 
 .btn:hover {

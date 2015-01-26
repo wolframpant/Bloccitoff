@@ -5,6 +5,7 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2014 Daniel Eden
 */
+/* for page transitions */
 
 .animated {
   -webkit-animation-duration: 1s;

@@ -33,7 +33,7 @@ class ListsController < ApplicationController
   def show
     @list = List.find(params[:id])
     @cutoff = @list.cutoff
-    if @list.todos.exists? then  
+    if @list.todos.exists? then  # if a list has todos, then list them
       @list.todos.each do |t|
         if t.age_of_todo > @cutoff then
           t.delete
