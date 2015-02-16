@@ -1,32 +1,10 @@
-== README
+Blocitoff is a Ruby on Rails application which is hosted [here](https://hidden-brushlands-2390.herokuapp.com). It allows registered users to create multiple lists, each of which may contain multiple “todo” items. Each list has a “cutoff,” a number of days after which any undone item on that list is automatically deleted. The user chooses the cutoff when they create the list.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I used Devise to handle user authentication. Only registered and signed-in users can see any of the active options. Please take a look at application.example.yml for guidance on setting up your application.yml file.
 
-Things you may want to cover:
+A User may have many lists and a list may have many todos, so User has a 'has_many :through' relationship with Todos through the List model.
 
-* Ruby version
+The automatic deletion of undone todo items is performed in the Lists Controller, in the show action, as todos are listed in the List#show view. Todos are also deleted from the database when the user clicks on “Completed” for the given todo.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-<h2> setup </h2>
-Environment variables may be found in the config/application.yml, which is ignored by git; its blank template is config/application.example.yml.
+I used javascript and CSS animations to create fade in/fade out effects for page transitions.
 
