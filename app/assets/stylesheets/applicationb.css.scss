@@ -17,6 +17,11 @@
 body {
   background-color: #393939;
   color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 input, text_area {
@@ -33,14 +38,12 @@ input, text_area {
 }
 
 a {
-  /* color: #ff5a09; */
   color: #ff282d;
   font-weight: bold;
   font-size: 125%;
 }
 
 a:hover {
-  /* color: #f3843e; */
   color: #ff5a09;
 }
 

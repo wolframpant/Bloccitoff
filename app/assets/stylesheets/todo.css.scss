@@ -14,17 +14,17 @@
 .bigdescription {
   width: 35%;
   font-size: 125%;
-  font-family: Script MT Bold, Forte, sans-serif;
+  font-family: 'Happy Monkey', cursive;;
   padding-left: 10px;
 }
 
 .biglistname {
   width: 35%;
-  font-family: Script MT Bold, Forte, sans-serif;
+  font-family: 'Happy Monkey', cursive;
 }
 
 .listname {
-  font-family: Script MT Bold, Forte, sans-serif;
+  font-family: 'Happy Monkey', cursive;
   text-align: left;
   font-size: 125%;
 }
@@ -32,7 +32,7 @@
 .big_days_old {
   width: 15%;
   font-size: 125%;
-  font-family: Script MT Bold, Forte, sans-serif;
+  font-family: 'Happy Monkey', cursive;
   text-align: center;
 }
 
@@ -44,7 +44,7 @@
 
 .description_field {
   font-size: 125%;
-  font-family: Script MT Bold, Forte, sans-serif;
+  font-family: 'Happy Monkey', cursive;
 }
 
 .form_submit {
@@ -52,3 +52,6 @@
   font-size: 125%;
 }
 
+small {
+  font-family: 'Josefin Sans', sans-serif;
+}
